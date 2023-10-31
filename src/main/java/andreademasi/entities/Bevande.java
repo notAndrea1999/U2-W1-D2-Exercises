@@ -1,20 +1,16 @@
 package andreademasi.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-@AllArgsConstructor
+
 @Getter
 @Setter
+public class Bevande extends ElementiMenu {
 
-public class Bevande {
-    private String name;
-    private int Kcal;
-    private double price;
-
-    @Override
-    public String toString() {
-        return "{" + name + ", " + Kcal + " Kcal" + ", " + price + "$" + "}\n";
+    public Bevande(String name, int kcal, double price) {
+        super(name, kcal, price);
     }
 }
+
+

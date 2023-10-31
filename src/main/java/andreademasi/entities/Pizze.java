@@ -1,24 +1,19 @@
 package andreademasi.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
 
-@AllArgsConstructor
 @Getter
 @Setter
+public class Pizze extends ElementiMenu {
 
-public class Pizze {
-    private String name;
     private List<String> toppings;
-    private int Kcal;
-    private double price;
 
-    @Override
-    public String toString() {
-        return "{" + name + toppings + ", " + Kcal + " Kcal" + ", " + price + "$" + "}\n";
+
+    public Pizze(String name, List<String> string, int kcal, double price) {
+        super(name, kcal, price);
     }
 }
 
