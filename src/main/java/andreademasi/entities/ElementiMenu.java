@@ -5,12 +5,21 @@ import lombok.Getter;
 @Getter
 public abstract class ElementiMenu {
     private String name;
-    private int Kcal;
+    private int kcal;
     private double price;
 
-    public ElementiMenu(String nome, int kcal, double price) {
+    public ElementiMenu(String name, int kcal, double price) {
         this.name = name;
-        Kcal = kcal;
+        this.kcal = kcal;
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "ElementiMenu{" +
+                "name='" + name + '\'' +
+                ", kcal=" + kcal +
+                ", price=" + price +
+                '}';
     }
 }
